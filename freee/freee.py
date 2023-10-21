@@ -501,6 +501,23 @@ class Freee():
         url = urllib.parse.urljoin(self.account_endpoint, ("/").join(["deals", str(deal_id)]))
         return self.send_request(request_method, url, payload)
 
+    def create_deal(self, data):
+        
+          """取引(収入/支出)の作成
+
+        指定した事業所の取引（収入／支出）を作成する
+
+        Args:
+
+        Returns:
+
+        """
+        
+        request_method = "post"
+        url = urllib.parse.urljoin(self.account_endpoint, "deals")
+        return self.send_request(request_method, url, data)
+
+
 # ===========================================
 #     Expense application line templates(経費科目)
 # ===========================================
