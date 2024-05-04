@@ -60,7 +60,7 @@ freee.get_companies()
 - [ ] Deals取引（収入／支出）
     - [x] GET /deals 取引（収入／支出）一覧の取得
     - [x] GET /deals/{id} 取引（収入／支出）の取得
-    - [ ] POST /deals 取引（収入／支出）の作成
+    - [x] POST /deals 取引（収入／支出）の作成
     - [ ] PUT /deals/{id} 取引（収入／支出）の更新
 
 - [x] Expense application line templates (経費科目)
@@ -109,7 +109,7 @@ freee.get_companies()
 
 - [ ] Renews (取引の+更新)
     - [ ] DELETE /deals/{id}/renews/{renew_id} 取引（収入／支出）の+更新の削除
-    - [ ] POST /deals/{id}/renews 取引（収入／支出）に対する+更新の作成
+    - [x] POST /deals/{id}/renews 取引（収入／支出）に対する+更新の作成
     - [ ] PUT /deals/{id}/renews/{renew_id} 取引（収入／支出）の+更新の更新
 
 - [ ] Sections (部門)

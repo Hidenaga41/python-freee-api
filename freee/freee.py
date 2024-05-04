@@ -816,6 +816,14 @@ class Freee():
         request_method = "get"
         url = urllib.parse.urljoin(self.account_endpoint, ("/").join(["manual_journals", id]))
         return self.send_request(request_method, url, payload)
+# ===========================================
+#     Renews (取引の+更新)
+# ===========================================
+
+    def post_deal_renews(self, deal_id, data):
+        request_method = "post"
+        url = urllib.parse.urljoin(self.account_endpoint, ("/").join(["deals", str(deal_id), "renews"]))
+        return self.send_request(request_method, url, data)
 
 # ===========================================
 #     Trial balance (試算表)
