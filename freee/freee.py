@@ -820,10 +820,10 @@ class Freee():
 #     Renews (取引の+更新)
 # ===========================================
 
-    def post_deal_renews(self, deal_id, data):
+    def post_deal_renews(self, deal_id, **payload):
         request_method = "post"
         url = urllib.parse.urljoin(self.account_endpoint, ("/").join(["deals", str(deal_id), "renews"]))
-        return self.send_request(request_method, url, data)
+        return self.send_request(request_method, url, payload)
 
 # ===========================================
 #     Trial balance (試算表)
