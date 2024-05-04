@@ -822,14 +822,14 @@ class Freee():
 
     def post_deal_renews(self, deal_id, data):
         request_method = "post"
-        url = urllib.parse.urljoin(self.account_endpoint, ("/").join(["deals", str(deal_id), "renews"]))
-        return self.send_request(request_method, url, data)
+        url = urllib.parse.urljoin(self.account_endpoint, ("/").join(["deals", deal_id, "renews"]))
+        return self.send_request(request_method, url, payload)
 
 # ===========================================
 #     Trial balance (試算表)
 # ===========================================
 
-    def get_reports_trial_bs(self, **payload):
+    def get_reports_trial_bs(self, data):
         """貸借対照表の取得
 
         指定した事業所の貸借対照表を取得する
