@@ -91,11 +91,21 @@ class Freee():
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + self.access_token
             }
-            res = requests.post(url, headers=headers, data=json.dumps(payload))
-            if res.ok:
-                return res.json()
-            else:
-                raise res.raise_for_status()
+            try:
+                res = requests.post(url, headers=headers, data=json.dumps(payload))
+                if res.ok:
+                    return res.json()
+                else:
+                    raise res.raise_for_status()
+            except Exception as e:
+                print('Error:', e)
+                print('Request:', res.request)
+                print('Response:', res.text)
+            # res = requests.post(url, headers=headers, data=json.dumps(payload))
+            # if res.ok:
+            #     return res.json()
+            # else:
+            #     raise res.raise_for_status()
         elif request_method == "put":
             headers = {
                 'Content-Type': 'application/json',
