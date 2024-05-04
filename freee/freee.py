@@ -92,6 +92,7 @@ class Freee():
                 'Authorization': 'Bearer ' + self.access_token
             }
             try:
+                print('Request:', url, headers, json.dumps(payload))
                 res = requests.post(url, headers=headers, data=json.dumps(payload))
                 if res.ok:
                     return res.json()
